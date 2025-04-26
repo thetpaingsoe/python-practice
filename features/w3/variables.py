@@ -61,3 +61,46 @@ a = 1
 A = 2
 print(a)
 print(A)
+
+# ---------------------------------------------
+# Multiple Variables Assignment
+# ---------------------------------------------
+print("\nMultiple Variables Assignment")
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+
+# ---------------------------------------------
+# One Value to Multiple Variables
+# ---------------------------------------------
+print("\nOne Value to Multiple Variables")
+
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+
+# ---------------------------------------------
+# Unpacking a Collection
+# ---------------------------------------------
+print("\nUnpacking a Collection")
+
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+
+# ---------------------------------------------
+# Global Variables
+# ---------------------------------------------
+print("\nGlobal Variables")
+x = "awesome"
+
+def myfunc():
+    global x
+    x = "fantastic"
+
+myfunc()
+print("Python is " + x)
