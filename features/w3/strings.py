@@ -113,3 +113,44 @@ print(x) # Hello Leon
 # splict string
 x = x.split(" ")
 print(x) # ['Hello', 'Leon']
+
+# ---------------------------------------------
+# Concact String
+# ---------------------------------------------
+print("\Concat Strings")
+
+x = "Hello"
+y = 'Theo'
+print(x + " " + y)
+
+# ---------------------------------------------
+# Formatted String
+# ---------------------------------------------
+print("\nFormatted String")
+
+age = 12
+print(f"My name is Theo and I am {age} years old.")
+
+# Add modifiers to the formatted string
+price = 23
+print(f"This price of this piece is {price:.2f}") # 23.00
+
+# Operations in formatted string
+print(f"2 + 3 = { 2 + 3 }") # 2 + 3 = 5
+
+# ---------------------------------------------
+# Escape Characters
+# ---------------------------------------------
+print("\nEscape Characters")
+
+print("Single Quote: \'")
+print("Double Quote: \"")
+print("Backslash: \\")
+print("Tab: \tValue")
+print("New Line: \nValue")
+print("Backspace: \bValue")
+print("Carriage Return: \rValue")
+print("Form Feed: \f")
+print("Octal: \152")  
+print("Hexadecimal: \x48")
+
