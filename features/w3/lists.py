@@ -71,3 +71,190 @@ print(x)
 # Insert
 x.insert(2, 'cherry')
 print(x)
+
+# ---------------------------------------------
+# Add List Items
+# ---------------------------------------------
+print("\nAdd List Items")
+
+x = ['apple', 'banana', 'kiwi']
+x.append('mango')
+print(x)
+
+# extend
+x = ['a', 'b', 'c']
+y = ['y', 'z']
+x.extend(y)
+print(x)
+
+# insert
+x.insert(3, "x")
+print(x)
+
+# ---------------------------------------------
+# Remove List Items
+# ---------------------------------------------
+print("\nRemove List Item")
+
+# Remove
+x = ['a','b','c','e']
+x.remove('e')
+print(x)
+
+# Remove occurence
+# It will remove only the first one
+x = ['a', 'b', 'a', 'c']
+x.remove('a')
+print(x)
+
+# Remove with index
+x.pop(1)
+print(x)
+
+# Remove last index
+x.pop() 
+print(x)
+
+# Remove with `del` keyword
+x = ['a', 'b', 'c', 'd']
+del x[1]
+print(x)
+
+del x
+try:
+    print(x)
+except NameError as e:
+    print(e)
+
+# clear
+x = ['a', 'b', 'c']
+x.clear()
+print(x)
+
+# ---------------------------------------------
+# Loop List
+# ---------------------------------------------
+print("\nLoop List")
+
+x = ['a','b','c']
+for val in x:
+    print(val)
+
+# with index
+print("loop with index")
+for i in range(len(x)):
+    print(x[i])
+
+# while loop
+print("while loop")
+i = 0
+while i < len(x):
+    print(x[i])
+    i += 1
+
+# short hand loop
+print("Short Loop ")
+[print(val) for val in x]
+
+# ---------------------------------------------
+# List Comprehension 
+# ---------------------------------------------
+
+# From this 
+x = ['apple', 'banana', 'orange', 'kiwi']
+y = []
+for val in x :
+    if "a" in val : 
+        y.append(val)
+
+print(y)
+
+# With List Comprehension
+z = [val for val in x if "a" in val]
+print(y)
+
+# Iterable
+print("Iterable")
+xx = [zz for zz in range(10) ]
+print(xx)
+
+# Expression
+print("expression")
+result1 = [ val.upper() for val in x ]
+print(result1)
+
+# Return the item if it is not banana, if it is banana return orange"
+result2 = [ val if val != "banana" else "orange" for val in x ]
+print(result2)
+
+
+# ---------------------------------------------
+# Sort Lists
+# ---------------------------------------------
+print("\nSort Lists")
+
+x = ['orange', 'kiwi', 'banana', 'apple', 'watermelon']
+x.sort()
+print(x)
+
+# reverse
+x.sort(reverse = True)
+print(x)
+
+# Case senstiitve 
+y = ['Orange', 'Kiwi', 'banana', 'Apple', 'melon']
+y.sort()
+print(y)
+y.sort(key = str.lower)
+print(y)
+
+# Reverse
+y.reverse()
+print(y)
+
+# ---------------------------------------------
+# Copy List
+# ---------------------------------------------
+print("\nCopy List")
+x = ['a', 'b', 'c']
+y = x
+x.append('d')
+print(x)
+print(y)
+
+z = x.copy()
+x.append('e')
+print(x)
+print(z)
+
+a = list(x)
+x.append('f')
+print(x)
+print(a)
+
+b = x[:]
+x.append('g')
+print(x)
+print(b)
+
+# ---------------------------------------------
+# Join List
+# ---------------------------------------------
+print("\nJoin List")
+
+x = ['a','b','c']
+y = ['d','e','f']
+
+# with +
+a = x + y
+print(a)
+
+# loop and append
+z = x.copy()
+for val in y :
+    z.append(val)
+print(z)
+
+# using extend
+x.extend(y)
+print(x)
