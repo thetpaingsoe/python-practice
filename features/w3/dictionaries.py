@@ -197,3 +197,21 @@ for key, obj in dataDict.items() :
     print(f"key : {key}")
     for key, value in obj.items() : 
         print(f"{key} : {value}")
+
+# add new key
+dataDict["child4"] = {
+    "name" : "July",
+    "num" : 109
+}
+print("\n")
+for key in dataDict.keys() : 
+    print(f"key : {key}" )
+print(dataDict['child4'])
+
+# remove keys
+del dataDict["child2"]
+dataDict.pop("child3")
+
+print("\n")
+for key in dataDict.keys() : 
+    print(f"key : {key}" )
