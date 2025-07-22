@@ -208,7 +208,8 @@ print(y)
 y.sort(key = str.lower)
 print(y)
 
-# Reverse
+# Reverse 
+# it is position swap, not based on the value
 y.reverse()
 print(y)
 
@@ -258,3 +259,35 @@ print(z)
 # using extend
 x.extend(y)
 print(x)
+
+# ---------------------------------------------
+# Multi-Dimentional Matrix
+# ---------------------------------------------
+print("\nMatrix ")
+matrix = [
+    [2,5,3,9],
+    [4,3,2,3],
+    [1,4,3,6],
+    [3,1,8,2],
+]
+for row in matrix :
+    print(row)
+
+print("\n after sorted first row")
+matrix[0].reverse()
+for row in matrix :
+    print(row)
+
+print("\n Column 2 array")
+colIndex = 2
+col = [row[colIndex] for row in matrix]
+print(col)
+col.reverse()
+print(col)
+
+print("\n Column 2 Rversed")
+for index, row in enumerate(matrix) : 
+    row[colIndex] = col[index]
+
+for row in matrix :
+    print(row)
