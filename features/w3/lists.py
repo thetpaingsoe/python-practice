@@ -291,3 +291,68 @@ for index, row in enumerate(matrix) :
 
 for row in matrix :
     print(row)
+
+arr = [2,3,5]
+arr[1] += 1
+
+print(i)
+
+# r = arr.array(2)
+# print(r)
+# # arr[5] += 1
+
+# print(arr)
+
+
+def flippingMatrix(matrix):
+    dimension = len(matrix)  # This is 2N
+    N = dimension // 2       # This is N
+    print(f"d : {dimension}, N : {N}")
+    max_total_sum = 0
+
+    # Iterate through the rows of the TOP-LEFT N x N quadrant
+    for r in range(N):
+        # Iterate through the columns of the TOP-LEFT N x N quadrant
+        for c in range(N):
+            # Get the four symmetric values for the current (r, c) slot
+            print(f"r : {r} , c : {c}")
+            # 1. Top-Left quadrant element itself
+            val1 = matrix[r][c]
+            print(val1)
+            # 2. Top-Right quadrant symmetric element
+            # Same row 'r', but column mirrored from the end
+            print(f"r : {r} , c : {dimension - 1 - c}")
+            val2 = matrix[r][dimension - 1 - c]
+            print(val2)
+            # 3. Bottom-Left quadrant symmetric element
+            # Row mirrored from the end, same column 'c'
+            print(f"r : {dimension - 1 - r} , c : {c}")
+            val3 = matrix[dimension - 1 - r][c]
+            print(val3)
+            # 4. Bottom-Right quadrant symmetric element
+            # Both row and column mirrored from the end
+            print(f"r : {dimension - 1 - r} , c : {dimension - 1 - c}")
+            val4 = matrix[dimension - 1 - r][dimension - 1 - c]
+            print(val4)
+
+            print('\n')
+            # Choose the largest among these four and add to the sum
+            max_total_sum += max(val1, val2, val3, val4)
+
+    return max_total_sum
+
+# Test with your example:
+my_matrix = [
+    [112, 42, 83, 119],
+    [56, 125, 56, 49], 
+    [15, 78, 101, 43],
+    [62, 98, 114, 108]
+]
+
+result = flippingMatrix(my_matrix)
+print(f"The maximum possible sum for the top-left quadrant is: {result}") # Expected: 26
+
+
+a = [ 'o', 'l', 'm', 'k', 'n' ]
+a.sort()
+print(a)
