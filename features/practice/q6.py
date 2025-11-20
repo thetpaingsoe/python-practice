@@ -57,7 +57,7 @@ def merge(nums1, m, nums2, n):
 
     return nums1
 
-class TestPalindromeIndex(unittest.TestCase):
+class TestMerge(unittest.TestCase):
     def test_case1(self):
         
         self.assertEqual(merge([1,2,3,0,0,0], 3, [2,5,6], 3), [1,2,2,3,5,6])
