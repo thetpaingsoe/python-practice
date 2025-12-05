@@ -85,13 +85,13 @@ def romanToInt(s):
     return total 
 
 class TestRomanToInt(unittest.TestCase) : 
-    def test_basic_case(self):
+    def test_case1(self):
         self.assertEqual(romanToInt("III"), 3)
 
-    def test_basic_negative(self):
+    def test_case2(self):
         self.assertEqual(romanToInt("LVIII"), 58)
     
-    def test_basic_invalid_target(self):
+    def test_case3(self):
         self.assertEqual(romanToInt("MCMXCIV"), 1994)
 
 if __name__ == "__main__":
