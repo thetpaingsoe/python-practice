@@ -66,22 +66,10 @@ def intToRoman(num):
     :rtype: str
     """
     
-    charMap = {}
-    charMap[1] = "I"
-    charMap[4] = "IV"
-    charMap[5] = "V"
-    charMap[9] = "IX"
-    charMap[10] = "X"
-    charMap[40] = "XL"
-    charMap[50] = "L"
-    charMap[90] = "XC"
-    charMap[100] = "C"
-    charMap[400] = "CD"
-    charMap[500] = "D"
-    charMap[900] = "CM"
-    charMap[1000] = "M"
-
-    sortedKeys = reversed(sorted(charMap.keys()))
+    charMap = {1000 : "M", 900 : "CM", 500 : "D", 400 : "CD", 100 : "C", 90 : "XC", 50 : "L", 40 : "XL", 10 : "X", 9 : "IX", 5 : "V", 4 : "IV", 1 : "I"}
+        
+    sortedKeys = sorted(charMap.keys(), reverse=True)
+    
     numHolder = num
     result = ""
     for k in sortedKeys: 
